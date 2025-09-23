@@ -4,10 +4,9 @@ body {
 }
 
 .container {
-  background-color: #0d1b2a;
-  color: white;
+  max-width: 1200px;
   margin-inline: auto;
-  padding: 1rem;
+  padding: 0 1rem;
 }
 
 a {
@@ -15,7 +14,60 @@ a {
   text-decoration: none;
 }
 
-nav {
+.navbar {
+  background-color: #0d1b2a;
   display: flex;
+  color: white;
+  padding: 1rem 2rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+.nav-links a:hover {
+  color: #00e676;
+}
+.logo {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.grid_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  grid-auto-rows: minmax(150px, auto);
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: turquoise;
+  color: #fff;
+  border-radius: 12px;
   text-decoration: none;
+  text-align: center;
+}
+
+/* Tablet (≤ 1024px): 2 columnas */
+@media (max-width: 1024px) {
+  .grid_container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Móvil (≤ 600px): 1 columna */
+@media (max-width: 600px) {
+  .grid_container {
+    grid-template-columns: 1fr;
+  }
 }
