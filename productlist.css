@@ -81,8 +81,14 @@
 }
 
 .product-cta {
-  margin-top: 0.3rem;
-  text-decoration: underline;
+  display: inline-block;
+  background: #0077cc;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
 }
 
 .nedsat .badge--sale {
@@ -91,6 +97,126 @@
 
 @media (max-width: 600px) {
   .product_list_container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*Product*/
+
+/*Product page layout*/
+.product {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem 0;
+  align-items: start;
+  margin-top: 2rem;
+}
+
+/*Galería*/
+.product_gallery .media {
+  position: relative;
+  aspect-ratio: 4/3;
+  background: white;
+  border: 1px solid #eeeeee;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product_gallery .media img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/*Info*/
+.product_title {
+  margin: 0.25rem 0 1rem;
+  font-size: 1.75rem;
+  line-height: 1.2;
+  color: #0d1b2a;
+}
+
+.data {
+  display: grid;
+  gap: 0.6rem;
+  margin: 1rem 0;
+}
+.data > div {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.25rem 1rem;
+}
+.data dt {
+  font-weight: 700;
+  color: #0d1b2a;
+}
+.data dd {
+  margin: 0;
+  color: #555;
+}
+
+.brand_head {
+  font-size: 1.5rem;
+  margin: 1.25rem 0 0.25rem;
+  color: #0d1b2a;
+}
+.brand_copy {
+  color: #666;
+}
+
+.product_buybox {
+  background: #eeeeee;
+  border-radius: 10px;
+  padding: 1.25rem;
+  position: sticky;
+  top: 1rem;
+}
+.buybox_title {
+  margin: 0 0 0.25rem;
+  line-height: 1.15;
+}
+.buybox_meta {
+  margin: 0 0 1rem;
+  color: #8a8a8a;
+}
+
+.price {
+  margin: 0.5rem 0 1rem;
+  font-weight: 700;
+  color: #0d1b2a;
+}
+
+.field {
+  display: grid;
+  gap: 0.35rem;
+  margin: 1rem 0;
+}
+.field select {
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  background: white;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  border: 0;
+  cursor: pointer;
+  font-weight: 700;
+}
+.btn_primary {
+  background: #0077cc;
+  color: white;
+}
+@media (max-width: 600px) {
+  .product {
     grid-template-columns: 1fr;
   }
 }
