@@ -10,7 +10,6 @@ body {
 }
 
 a {
-  color: white;
   text-decoration: none;
 }
 
@@ -29,9 +28,7 @@ a {
   margin: 0;
   padding: 0;
 }
-.nav-links a:hover {
-  color: #00e676;
-}
+
 .logo {
   font-size: 1.3rem;
   font-weight: bold;
@@ -46,7 +43,7 @@ a {
   grid-auto-rows: minmax(150px, auto);
 }
 
-.card {
+.category-card {
   display: flex;
   align-items: center;
   justify-content: center;
