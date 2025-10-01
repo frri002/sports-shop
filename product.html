@@ -6,6 +6,7 @@
     <title>My online store</title>
     <link rel="stylesheet" href="store.css" />
     <link rel="stylesheet" href="productlist.css" />
+    <script src="product.js" defer></script>
   </head>
   <body>
     <header class="navbar container">
@@ -19,60 +20,6 @@
       </nav>
     </header>
 
-    <main class="container product">
-      <section class="product_gallery">
-        <div class="media">
-          <img src="assests/img/tshirt.png" alt="tshirt" />
-        </div>
-      </section>
-      <section class="product_info">
-        <h1 class="product_title">Sahara Team India Fanwear Round Neck Jersey</h1>
-
-        <h2>Product Information</h2>
-        <dl class="data">
-          <div>
-            <dt>Model name</dt>
-            <dd>Sahara Team India Fanwear Round Neck Jersey</dd>
-          </div>
-          <div>
-            <dt>Color</dt>
-            <dd>Blue</dd>
-          </div>
-          <div>
-            <dt>Inventory number</dt>
-            <dd>1163</dd>
-          </div>
-          <div>
-            <dt>Category</dt>
-            <dd>Tshirts</dd>
-          </div>
-          <div>
-            <dt>Brand</dt>
-            <dd>Nike</dd>
-          </div>
-          <div>
-            <dt>Material</dt>
-            <dd>Polyester</dd>
-          </div>
-        </dl>
-      </section>
-      <aside class="product_buybox">
-        <h2 class="buybox_title">Sahara Team India Fanwear Round Neck Jersey</h2>
-        <p class="buybox_meta">Nike | Tshirts</p>
-        <p class="price"><span class="old">DKK 1595,-</span></p>
-
-        <label class="field">
-          <span>Choose a size</span>
-          <select>
-            <option>S</option>
-            <option>M</option>
-            <option>L</option>
-            <option>XL</option>
-          </select>
-        </label>
-
-        <button class="btn btn_primary">Add to basket</button>
-      </aside>
-    </main>
+    <main id="productContainer" class="container product"></main>
   </body>
 </html>
