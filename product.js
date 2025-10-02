@@ -5,11 +5,12 @@ console.log(productContainer);
 const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
 
-fetch("https://kea-alt-del.dk/t7/api/products/1164")
-  .then((res) => res.json())
-  .then((product) => {
-    //console.log(product.articletype);
-
+fetch(`https://kea-alt-del.dk/t7/api/products/${id}`)
+  .then((response) => response.json())
+  .then(data => showProduct(data))
+   
+function showProduct(product) {
+  
     productContainer.innerHTML = `
 
     <section class="product_gallery">
@@ -62,4 +63,4 @@ fetch("https://kea-alt-del.dk/t7/api/products/1164")
         <button class="btn btn_primary">Add to basket</button>
       </aside>
  `;
-});
+}
